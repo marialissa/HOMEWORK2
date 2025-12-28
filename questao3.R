@@ -104,6 +104,18 @@
         #TEORICA
             prob_teo_6065 <- pnorm(65, mean = 62, sd = 3.5) - pnorm(60, mean = 62, sd = 3.5)
             cat("P(60 < T < 65) teorica é: ", prob_teo_6065, "\n")
+#item 4
+    #(a)
+        
+
+        hist(temp_manual, freq = FALSE, main = "Temperatura manual e nativa sobrepostas", xlab = "Valor", ylab = "Densidade", col = "lightblue", border = "white")
+        hist(temp_nativa, freq = FALSE, add = TRUE, col = rgb(1, 0, 0, 0.5), border = "white") # rgb(R, G, B, alpha)
+
+        curve(dnorm(x, mean = 62, sd = 3.5),
+              add = TRUE,
+              col = "blue",
+              lwd = 2,
+              lty = 2) 
 
     #(f)P(T>75)
         #TEORICO
